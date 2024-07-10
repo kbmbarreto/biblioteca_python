@@ -2,6 +2,7 @@ from core.configs import settings
 from sqlalchemy import Column, Integer, String, ForeignKey
 from sqlalchemy.orm import relationship
 
+
 class BookModel(settings.DATABASE_BaseModel):
     __tablename__ = 'book'
 
@@ -15,5 +16,4 @@ class BookModel(settings.DATABASE_BaseModel):
     physical: str = Column(Integer)
     cover: str = Column(String(256))
 
-    # Relacionamento com a model de editoras
     publishing_company = relationship('PublishingCompanyModel', back_populates='books')

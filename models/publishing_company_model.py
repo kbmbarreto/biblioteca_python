@@ -2,6 +2,7 @@ from core.configs import settings
 from sqlalchemy import Column, Integer, String
 from sqlalchemy.orm import relationship
 
+
 class PublishingCompanyModel(settings.DATABASE_BaseModel):
     __tablename__ = 'publishing_company'
 
